@@ -14,7 +14,7 @@ horas_semana = [
 
 UMBRAL_HORAS = 40
 
-def calcular_Jornada(horas):
+def calcular_jornada(horas):
     """Calcular total de horas y clasificar jornada"""
     total= sum(horas)
     if total > UMBRAL_HORAS:
@@ -30,7 +30,7 @@ def mostrar_informe():
         for recurso in horas_semana:
             nombre = recurso[0]
             horas = recurso[1:]
-            total, clasificacion = calcular_Jornada(horas)
+            total, clasificacion = calcular_jornada(horas)
 
             print (f"\nRecurso: {nombre}")
             print (f" horas: L:{horas[0]} M:{horas[1]} Mi:{horas[2]} J:{horas[3]} V:{horas[4]}")
