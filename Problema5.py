@@ -21,3 +21,19 @@ def calcular_Jornada(horas):
         return total, "Sobretiempo"
     else:
         return total, "Horario Estandar"
+def mostrar_informe():
+        """Muestra el informe completo"""
+        print("=" * 50)
+        print("INFORME DE HORAS TRABAJADAS")
+        print("=" * 50) 
+    
+        for recurso in horas_semana:
+            nombre = recurso[0]
+            horas = recurso[1:]
+            total, clasificacion = calcular_Jornada(horas)
+
+            print (f"\nRecurso: {nombre}")
+            print (f" horas: L:{horas[0]} M:{horas[1]} Mi:{horas[2]} J:{horas[3]} V:{horas[4]}")
+            print (f" Total semanales: {total} horas")
+            print (f"Clasificación: {clasificacion}")
+            print("=" * 50)
