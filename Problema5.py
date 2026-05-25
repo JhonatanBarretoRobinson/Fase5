@@ -12,3 +12,12 @@ horas_semana = [
     ["Sofia Martinez", 9,9,9,9,9]
 ]
 
+UMBRAL_HORAS = 40
+
+def calcular_Jornada(horas):
+    """Calcular total de horas y clasificar jornada"""
+    total= sum(horas)
+    if total > UMBRAL_HORAS:
+        return total, "Sobretiempo"
+    else:
+        return total, "Horario Estandar"
