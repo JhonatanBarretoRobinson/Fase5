@@ -37,3 +37,4 @@ def mostrar_informe():
             print (f" Total semanales: {total} horas")
             print (f"Clasificación: {clasificacion}")
             print("=" * 50)
+mostrar_informe() 
